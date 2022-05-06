@@ -78,3 +78,8 @@ CharacterCasing =>  Binded with value Readed from UpperCaseAttribute / LowerCase
 Mask => Binded with value Readed from DataFormatttribute DisplayFormat 
 
 
+TODO
+
+    Make a version without reflection, to improve performance, may be using source generators
+    
+    
