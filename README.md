@@ -8,9 +8,9 @@ and read all possible ViewModel Annotations to control without any coding
 
 things like this
 
-                    <!-- (PasswordBox , but any control, like Textbox, combobox, radio buttons, etc) -->
+                    < ! -- (PasswordBox , but any control, like Textbox, combobox, radio buttons, etc) -- >
 
-                    <PasswordBox 
+                    < PasswordBox 
                                 Header="read DisplayName from anotations on view model"
                                 Description=""read Error on viewmodel validation events"
                                 PlaceholderText="read DisplayDescription from anotations on view model"
@@ -19,12 +19,12 @@ things like this
                                 Password="{x:Bind ViewModel.PasswordProp}"
                                 MaxLength=""read all validation attributes from anotations on view model"
                                 etc...etc...etc
-                        />
+                        / > 
                         
 simple will be this in markup:                       
-                     <PasswordBox 
+                     < PasswordBox 
                                 be:MVVM.ViewModel="{x:Bind ViewModel}"
-                                be:MVVM.PropertyName="PasswordProp" />
+                                be:MVVM.PropertyName="PasswordProp" / >
                                
                                
 The be:MVM extensions make all binding to you based on anottations of view model
@@ -34,24 +34,26 @@ also suport display error messages in TextBlock other than description property 
 
 example:
 
-                 <CheckBox   x:Name="NewsletterCheckBox"
+                 < CheckBox   x:Name="NewsletterCheckBox"
                                         be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
                                         be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
                                         be:MVVM.PropertyName="Newsletter"
-                                        Content="I Accept receive Emails."/>
+                                        Content="I Accept receive Emails."/ >
 
-                      <TextBlock Foreground="DarkRed" x:Name="AcceptErrorControl" />
+                      < TextBlock Foreground="DarkRed" x:Name="AcceptErrorControl" / >
                       
 ViewModel:
 
 public partial class UserViewModel : MVVMBaseViewModel 
 {
+
         [Display(Name = "Password", Description = "Type your password Here")]
         [Password]
         [Required(ErrorMessage = "Please, Type your Password.")]
         [StringLength(maximumLength: 16, MinimumLength = 6, ErrorMessage = "Password must be at minumum 6 chars e maximum of 16 chars !")]
         [ObservableProperty]
         private string passwordProp = String.Empty;
+        
         
         [Display(Name = "Newsletter", Description = "Marque esta opção indicando que você aceita receber nossos emails.")]
         [IsCheckedAttribute ("It is mandatory accept receive emails to continue.")]
