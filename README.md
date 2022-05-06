@@ -23,10 +23,9 @@ things like this
                                 etc...etc...etc
                         / > 
                         
-simple will be this in markup:                       
-                     < PasswordBox 
-                                be:MVVM.ViewModel="{x:Bind ViewModel}"
-                                be:MVVM.PropertyName="PasswordProp" / >
+simple will be this in markup: 
+
+       < PasswordBox be:MVVM.ViewModel="{x:Bind ViewModel}"  be:MVVM.PropertyName="PasswordProp" / >
                                
                                
 The be:MVM extensions make all binding to you based on anottations of view model
@@ -36,11 +35,13 @@ also suport display error messages in TextBlock other than description property 
 
 example:
 
-                 < CheckBox   x:Name="NewsletterCheckBox"
-                                        be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
-                                        be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
-                                        be:MVVM.PropertyName="Newsletter"
-                                        Content="I Accept receive Emails."/ >
+     
+     < CheckBox   x:Name="NewsletterCheckBox"
+                  be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
+                  be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
+                  be:MVVM.PropertyName="Newsletter"
+                  Content="I Accept receive Emails."/ >
+
 
                       < TextBlock Foreground="DarkRed" x:Name="AcceptErrorControl" / >
                       
@@ -67,32 +68,50 @@ public partial class UserViewModel : MVVMBaseViewModel
 MVVM Bind Extensions automaticaly bind these properties based on ViewModel Annotations:
 
 InputScope   => Binded with InpuScope Based on DataTypeAttribute or from Validators or by DataFormat (9, A, etc Masks)
+
 Header       => Binded with value readed from DIsplayNameAttribute.Name
+
 TExt / Password/ SelectedValue => Binded to property indicated by Propertyname  
+
 Description => Binded to validation error of Windows Community Toolkit ValidationObject error property
+
 Tooltip => Binded with value Readed from DIsplayNameAttribute.Description
+
 PlaceHolder => Binded with value Readed from DataFormat Format otherwise from DIsplayNameAttribute.Description
+
 MaxLenght   => Binded with value Readed from StringLengthAttribute or from MaxLengthAttribute
+
 IsReadOnly  => Binded with value Readed from EditableAttribute
+
 MinValue / Minimum => Binded with value Readed from RangeAttribute
+
 MaxValue / Maximum => Binded with value Readed from RangeAttribute 
+
 CharacterCasing =>  Binded with value Readed from UpperCaseAttribute / LowerCaseAttribute
+
 Mask => Binded with value Readed from DataFormatttribute DisplayFormat 
 
 
 User Customization:
 
+
 You can tell MVVM Binding extensions at app Startup how to Bind Controls and decect proper InputScopes using 
+
 
    MVVM.InputScopesOfValidators.Add { typeof (Validator), InputScopeNameValue});
    
+   
    and
+   
    
    MVVM.DataDependencyProperties.Add ( typeof (Control), DependencyPropertyOfControl});
 
+
    ie: MVVM.DataDependencyProperties.Add ( typeof (CustomTextBox), CustomTextBox.TextDependencyProperty});
    
+   
 TODO
+
 
     Make a version without reflection, to improve performance, may be using source generators
     
