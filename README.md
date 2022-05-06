@@ -80,6 +80,18 @@ CharacterCasing =>  Binded with value Readed from UpperCaseAttribute / LowerCase
 Mask => Binded with value Readed from DataFormatttribute DisplayFormat 
 
 
+User Customization:
+
+You can tell MVVM Binding extensions at app Startup how to Bind Controls and decect proper InputScopes using 
+
+   MVVM.InputScopesOfValidators.Add { typeof (Validator), InputScopeNameValue});
+   
+   and
+   
+   MVVM.DataDependencyProperties.Add ( typeof (Control), DependencyPropertyOfControl});
+
+   ie: MVVM.DataDependencyProperties.Add ( typeof (CustomTextBox), CustomTextBox.TextDependencyProperty});
+   
 TODO
 
     Make a version without reflection, to improve performance, may be using source generators
