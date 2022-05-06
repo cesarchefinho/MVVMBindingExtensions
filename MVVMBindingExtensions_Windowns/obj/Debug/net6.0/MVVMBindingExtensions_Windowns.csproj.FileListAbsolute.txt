@@ -1,5 +1,0 @@
-C:\Projetos\Monetize\MVVMBindingExtensions_Windowns\obj\Debug\net6.0\MVVMBindingExtensions_Windowns.csproj.AssemblyReference.cache
-C:\Projetos\Monetize\MVVMBindingExtensions_Windowns\obj\Debug\net6.0\MVVMBindingExtensions_Windowns.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projetos\Monetize\MVVMBindingExtensions_Windowns\obj\Debug\net6.0\MVVMBindingExtensions_Windowns.AssemblyInfoInputs.cache
-C:\Projetos\Monetize\MVVMBindingExtensions_Windowns\obj\Debug\net6.0\MVVMBindingExtensions_Windowns.AssemblyInfo.cs
-C:\Projetos\Monetize\MVVMBindingExtensions_Windowns\obj\Debug\net6.0\MVVMBindingExtensions_Windowns.csproj.CoreCompileInputs.cache
