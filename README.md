@@ -2,6 +2,8 @@
 
 XAML Binding Extension to Bind View Models Properties anotadded with ComponentModel.DataAnnotations Attributes 
 
+Works on UNO, WinUI3 and UWP
+
 An Extension to XAML language that simplify markup and expand XAML capabilities
 by automatcaly bind control to ViewModel, display validation error messages individualy per control,
 and read all possible ViewModel Annotations to control without any coding
