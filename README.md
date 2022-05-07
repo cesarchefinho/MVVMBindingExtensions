@@ -37,11 +37,12 @@ also suport display error messages in TextBlock other than description property 
 example:
 
      
- < CheckBox   x:Name="NewsletterCheckBox"
-              be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
-              be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
-              be:MVVM.PropertyName="Newsletter"
-              Content="I Accept receive Emails."/ >
+ < CheckBox   
+
+        be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
+        be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
+        be:MVVM.PropertyName="Newsletter"
+        Content="I Accept receive Emails."/ >
 
 
      < TextBlock Foreground="DarkRed" 
