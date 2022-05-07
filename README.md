@@ -10,22 +10,23 @@ and read all possible ViewModel Annotations to control without any coding
 
 things like this
 
-                    < ! -- (PasswordBox , but any control, like Textbox, combobox, radio buttons, etc) -- >
+               < ! -- (PasswordBox , but any control, like Textbox, combobox, radio buttons, etc) -- >
 
-                    < PasswordBox 
-                                Header="read DisplayName from anotations on view model"
-                                Description=""read Error on viewmodel validation events"
-                                PlaceholderText="read DisplayDescription from anotations on view model"
-                                TextboxMask="read DisplayFormat from anotations on view model"
-                                InputScope="Read best input scope based on anotations and viewmodel property"
-                                Password="{x:Bind ViewModel.PasswordProp}"
-                                MaxLength=""read all validation attributes from anotations on view model"
-                                etc...etc...etc
+               < PasswordBox 
+                           Header="read DisplayName from anotations on view model"
+                           Description=""read Error on viewmodel validation events"
+                           PlaceholderText="read DisplayDescription from anotations on view model"
+                           TextboxMask="read DisplayFormat from anotations on view model"
+                           InputScope="Read best input scope based on anotations and viewmodel property"
+                           Password="{x:Bind ViewModel.PasswordProp}"
+                           MaxLength=""read all validation attributes from anotations on view model"
+                          etc...etc...etc
                         / > 
                         
 simple will be this in markup: 
 
-       < PasswordBox be:MVVM.ViewModel="{x:Bind ViewModel}"  be:MVVM.PropertyName="PasswordProp" / >
+       < PasswordBox be:MVVM.ViewModel="{x:Bind ViewModel}"  
+                     be:MVVM.PropertyName="PasswordProp" / >
                                
                                
 The be:MVM extensions make all binding to you based on anottations of view model
@@ -36,14 +37,15 @@ also suport display error messages in TextBlock other than description property 
 example:
 
      
-     < CheckBox   x:Name="NewsletterCheckBox"
-                  be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
-                  be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
-                  be:MVVM.PropertyName="Newsletter"
-                  Content="I Accept receive Emails."/ >
+ < CheckBox   x:Name="NewsletterCheckBox"
+              be:MVVM.ErrorControl="{x:Bind NewsletterErrorControl}" 
+              be:MVVM.ViewModel="{x:Bind ViewModel.DadosCadastro}" 
+              be:MVVM.PropertyName="Newsletter"
+              Content="I Accept receive Emails."/ >
 
 
-                      < TextBlock Foreground="DarkRed" x:Name="AcceptErrorControl" / >
+     < TextBlock Foreground="DarkRed" 
+                 x:Name="AcceptErrorControl" / >
                       
 ViewModel:
 
