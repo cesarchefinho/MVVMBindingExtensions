@@ -118,7 +118,7 @@ Alternativaly you can bind DataAnotations individualy with MarkupExtensions like
 .... xmlns:be="using:CommunityToolkit.Mvvm.BindingExtensions"
 
 
-   < TextBox   Text={x:Bind ViewModel.Username, Mode=TwoWay} 
+   < TextBox   Text={x:Bind ViewModel.Username, Mode=TwoWay}  
                Header={be:DisplayNameOf ViewModel=ViewModel, PropertyName="UserName"} 
                TextBox.Tooltip={be:DescriptionOf ViewModel=ViewModel, PropertyName="UserName"}                
                Description={be:ErrorOf ViewModel=ViewModel, PropertyName="UserName"}          
