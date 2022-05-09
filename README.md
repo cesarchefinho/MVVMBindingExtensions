@@ -113,6 +113,20 @@ You can tell MVVM Binding extensions at app Startup how to Bind Controls and dec
    ie: MVVM.DataDependencyProperties.Add ( typeof (CustomTextBox), CustomTextBox.TextDependencyProperty});
    
    
+Alternativaly you can bind DataAnotations individualy with MarkupExtensions like
+
+.... xmlns:be="using:CommunityToolkit.Mvvm.BindingExtensions"
+
+
+   < TextBox   Text={x:Bind ViewModel.Username, Mode=TwoWay}
+               Header={be:DisplayNameOf ViewModel=ViewModel, PropertyName="UserName"} 
+               TextBox.Tooltip={be:DescriptionOf ViewModel=ViewModel, PropertyName="UserName"}
+               Description={be:ErrorOf ViewModel=ViewModel, PropertyName="UserName"}
+               PlaceHolder={be:DisplayFormatOf ViewModel=ViewModel, PropertyName="UserName"}
+               MinLength={be:MinLengthOf ViewModel=ViewModel, PropertyName="UserName"}					
+               MaxLength={be:MaxLengthOf ViewModel=ViewModel, PropertyName="UserName"}	
+       / >	
+   
 TODO
 
 
