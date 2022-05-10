@@ -32,7 +32,7 @@ using CommunityToolkit.Mvvm.Input;
        {
           ValidateAll ();
 
-          if (!Usuario.HasErrors)
+          if (! HasErrors)
           {
              // Do Something
           }
