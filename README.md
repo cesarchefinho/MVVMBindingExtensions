@@ -1,5 +1,9 @@
 # MVVMBindingExtensions
 
+Bind a property from viewmodel using its annotated data
+
+   < control be:MVVM. PropertyName="blabla" be:MVVM. ViewModel=vm / >
+
 XAML Binding Extension to Bind View Models Properties anotadded with ComponentModel.DataAnnotations Attributes 
 
 Works on UNO, WinUI3 and UWP
