@@ -2,7 +2,7 @@
 
 Bind a property from viewmodel using its annotated data
 
-   < control be:MVVM. PropertyName="blabla" be:MVVM. ViewModel={x:Bind vm} / >
+   < control be:MVVM. PropertyName="myproperty" be:MVVM. ViewModel={x:Bind mymodel} / >
 
 XAML Binding Extension to Bind View Models Properties anotadded with ComponentModel.DataAnnotations Attributes 
 
