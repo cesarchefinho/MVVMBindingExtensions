@@ -23,7 +23,7 @@
                     VerticalAlignment="Top" 
                     Padding="20">
 
-                <PasswordBox   
+                <TextBox   
                         be:MVVM.ViewModel="{x:Bind ViewModel}"
                         be:MVVM.PropertyName="UserId"
                         Margin="0,10,0,0" 
