@@ -50,7 +50,7 @@ example:
 
 
      < TextBlock Foreground="DarkRed" 
-                 x:Name="AcceptErrorControl" / >
+                 x:Name="NewsletterErrorControl" / >
                       
 ViewModel:
 
